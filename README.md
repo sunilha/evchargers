@@ -37,7 +37,7 @@ K-means Clustering :
 1. Identified optimal number of clusters using elbow and Silhouette score method
 2. Created visualization of multiple features to better understand the clustering results 
 
-Jupyter Notebook having code for all these can be found [here](capstone-project.ipynb).
+Jupyter Notebook having code for all these can be found [here](capstone.ipynb).
 
 
 After above data analysis and applying K-means clustering algorithm below are my initial findings.
