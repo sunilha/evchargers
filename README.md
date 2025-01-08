@@ -1,19 +1,18 @@
-### Opportunity for EV Fast Charging Station
-
-**Author**
+### Where to set up new EV Fast Charging Station
 
 #### Executive summary
-
-#### Rationale
-There is significant growth in EV vehicle adaptation over the last few years. However the 
-growth of EV charging infrastructure comparatively low. EV adaption is mostly limited to cities, lack of EV charging infrastructure
-is one of major factors. So there is a sense of urgency to increase the 
+There is significant growth in EV vehicle adaptation over the last few years. However, the 
+growth of EV charging infrastructure comparatively low. EV adaption is mostly limited to pocket areas, lack of EV charging infrastructure
+is one of major factor. So there is a sense of urgency to increase the 
 pace of growth of EV Charging infrastructure. This opens a new avenue of business opportunities.
 
-#### Research Question
-EV Charging Stations are the fuel stations for EV Vehicles. There is a good amount of involved in 
+#### Rationale
+EV Charging Stations are the fuel stations for EV Vehicles. There is a good amount of time involved in 
 charging a EV vehicles. So while setting up new charging station it becomes important that we need to identify a location 
-which make business sense and make sure EV infrastructure not only limited to cities. 
+which make business sense, and it's available for wide range of users.
+
+#### Research Question
+Cluster the features which major role in identifying a good location to set up new charging station. 
 
 #### Data Sources
 1. The dataset is limited to California only
@@ -31,16 +30,26 @@ Have followed CRISP-DM process which is the standard process in industry for dat
 5. Evaluation of Results - Evaluate the quality of cluster by calculating Silhouette score, SNE and t-SNE visualization
 
 #### Results
-Data Analysis:
-1. Used Folium to visualize chargers, vehicles dataset on map
-K-means Clustering :
+Data Visualization:
+1. Used Folium to visualize chargers, vehicles dataset on California map
+2. Used t-SNE to visualize high-dimensional data in a low-dimensional space
+
+K-means Clustering Algorithm :
 1. Identified optimal number of clusters using elbow and Silhouette score method
 2. Created visualization of multiple features to better understand the clustering results 
 
+DBSCAN Clustering Algorithm :
+1. Identified optimal epsilon value and number of clusters using KneeLocator from kneed library 
+2. Created visualization of multiple features to better understand the clustering results
+
+Hierarchical Clustering Algorithm :
+1. Built single and complete linkage
+2. Created visualization using dendrogram
+3. Flatten the hierarchical cluster using fcluster
+
 Jupyter Notebook having code for all these can be found [here](capstone.ipynb).
 
-
-After above data analysis and applying K-means clustering algorithm below are my initial findings.
+After above data analysis and applying clustering and hierarchical algorithms below are my recommendations.
 1. There are close to 1700 zipcodes in California and EV Vehicles present in most of them, 
 however it's not the same for EV Fast Charging stations i.e. only 500 zipcodes have Fast Charging station
 2. There growth of EV Vehicles and EV Fast Charging Stations aren't relatively
@@ -49,18 +58,9 @@ however it's not the same for EV Fast Charging stations i.e. only 500 zipcodes h
    - accessibility shopping center, restaurants 
    - median household income, total population in the zipcode
 
-
-
 #### Next steps
-1. Perform modelling using DBScan clustering algorithm
-2. Evaluate and if application use hierarchical clustering algorithm
-3. Build SNE visualization
+1. If we can collect below data points of charging station will help in better clustering
+   1. optimal distance from Freeway or high traffic street
+   2. some kind of utilization/occupancy report
+2. We can collect energy pricing data from all the utility service providers and model with clustering algorithms will help to come up with better recommendations
 
-#### Outline of project
-
-- [Link to notebook 1]()
-- [Link to notebook 2]()
-- [Link to notebook 3]()
-
-
-##### Contact and Further Information
